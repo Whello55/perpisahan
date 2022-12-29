@@ -1,0 +1,72 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<link href="https://hanyauntukmu.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://hanyauntukmu.likeadream.repl.co/script.js"></script>
+<head>
+<!-- 
+This code was made by Rayya R
+Blog: https://sinkronin.com
+Instagram: rayyarrr
+TikTok: rayyarr_
+-->
+</head>
+<body><div id="bodyblur"><img src="https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg" width="100%" height="100%"/></div>
+
+<!-- Isi Konten --><div id='Content'>
+<div class="image"><img src="https://i.postimg.cc/RhTxp0cK/29desember-02.jpg" width="130px" height="130px"/></div><!--<div id="sp1"></div>-->
+<div><blockquote><p id="text"></p><p id="text2"></p></p><br><p id="text3"></p><a href="https://i.postimg.cc/jxpq5w2g/29desember-02.jpg?dl=1">Download</a></blockquote></div></div>
+
+<script type="text/javascript">
+            const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',});
+            const swalsy = Swal.mixin({confirmButtonText: 'Iya', allowOutsideClick: false,});
+            const swalst = Swal.mixin({allowOutsideClick: false, showConfirmButton: false, timer: 3000, timerProgressBar: true,});
+            
+            async function mulaitanya(){
+            	var { isConfirmed: tanyawal } = await swals.fire({title: `Ciye yang udah selesai magang nya`, imageUrl: 'https://i.postimg.cc/SsmkcNY9/bear-cute-1.gif', imageWidth: 120, imageHeight: 120, allowOutsideClick: false, showCancelButton: false,
+                });if(tanyawal){nama = 'Anisa & Rizka';kuis();}
+            }
+
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu',
+                    input: 'text',
+                    imageUrl: 'https://i.postimg.cc/vDFQZzhM/yyy.gif', imageWidth: 120, imageHeight: 120,
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                });
+                if(nama && nama.length < 11){
+                	window.nama = nama;
+                    kuis();                                 
+                } else {
+                    await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');
+                    mulai();
+                }
+            }
+            
+            async function kuis(){
+                  	await swalst.fire({
+                      title: 'Buat ' + nama + ' yang mau berpisah dengan CL :(', 
+                      imageUrl: 'https://i.postimg.cc/02wF21b1/peach-goma.gif', imageWidth: 120, imageHeight: 120,
+                      });   	
+                      await swalst.fire({
+                      title: 'semangat yaa, sukses terus kedepannya',
+                      imageUrl: 'https://i.postimg.cc/g06FWScx/tepukbadan.gif', imageWidth: 120, imageHeight: 120,
+                      });
+                      await swalst.fire({
+                      title: 'maaf ya kalo sering jahil & ngerepotin kalian &#128513;',
+                      imageUrl: 'https://i.postimg.cc/vZWmnK2p/gigit.gif', imageWidth: 120, imageHeight: 120,
+                      });
+                      await swalst.fire({
+                      title: 'Makasih sudah membantu aku dan teman2 &#128513;',
+                      imageUrl: 'https://i.postimg.cc/SsmkcNY9/bear-cute-1.gif', imageWidth: 120, imageHeight: 120,
+                      });
+                      text = "Semangat, " + nama + ".    ";
+                      emotnama = "&#128513;";
+                      text2 = "Jaga diri baik-baik... Jangan sedih, sukses yaa... semoga cepat lulus.... <br>Karena gak ada waktu buat print nih fotonya download + cetak sendiri ya wkw ";
+                      text3 = "Karena gak ada waktu buat print nih fotonya download + cetak sendiri ya wkw ";
+                      showDiv();
+             }
+             mulaitanya();
+</script>
+</body>
+</html>
